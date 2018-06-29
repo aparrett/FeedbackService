@@ -13,6 +13,6 @@ passport.use(
   }, 
   (accessToken, refreshToken, profile, done) => {
     console.log(profile)
-    new User({ googleId: profile.id })
+    new User({ googleId: profile.id }).save();
   })
 );
